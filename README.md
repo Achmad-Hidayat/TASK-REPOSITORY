@@ -3,7 +3,7 @@
 ---
 #### Cek Kabisat dan Hitung Hari dengan Loop
 ---
-##### Ini ilmu baru yang saya pelajari sekaligus pengalaman mencerna berbagai cara memahami system dan membuat codding walaupun belum 100% memahami , tapi berusaha untuk tetap memperhatikan step by step yang diberikan.
+##### Ini ilmu baru yang saya pelajari sekaligus pengalaman mencerna berbagai cara memahami system dan membuat codding walaupun belum sepenuhnya memahami,tetapi berusaha untuk tetap memperhatikan step by step yang diberikan.
 ---
 def validasi_input():
     while True:
@@ -58,3 +58,7 @@ elif h == 5:
     print(f"Tanggal {tanggal}/{bulan}/{tahun} adalah hari Kamis!")
 else:
     print(f"Tanggal {tanggal}/{bulan}/{tahun} adalah hari Jumat!")
+
+__________
+
+
