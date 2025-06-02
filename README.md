@@ -58,7 +58,6 @@ elif h == 5:
     print(f"Tanggal {tanggal}/{bulan}/{tahun} adalah hari Kamis!")
 else:
     print(f"Tanggal {tanggal}/{bulan}/{tahun} adalah hari Jumat!")
-
 __________
 
 
