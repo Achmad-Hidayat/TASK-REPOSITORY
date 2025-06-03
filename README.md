@@ -104,3 +104,35 @@ h = (tgl + (13 * (b + 1)) // 5 + K + K // 4 + J // 4 - 2 * J) % 7
 hari = ["Sabtu", "Minggu", "Senin", "Selasa", "Rabu", "Kamis", "Jumat"]
 
 print(f"\nTanggal {tgl}/{bln}/{thn} adalah hari {hari[h]}!")
+
+
+```python
+
+def validasi_input():
+    while True:
+        try:
+            tgl = int(input("Masukkan tanggal (1-31): "))
+            bln = int(input("Masukkan bulan (1-12): "))
+            thn = int(input("Masukkan tahun: "))
+            if 1 <= tgl <= 31 and 1 <= bln <= 12 and thn > 0:
+                return tgl, bln, thn
+            print("Input tidak valid. Coba lagi.")
+        except ValueError:
+            print("Harus masukkan angka!")
+
+print("Masukkan tanggal untuk cek hari dan kabisat:")
+tgl, bln, thn = validasi_input()
+
+print("\nCek tahun kabisat:")
+for i in range(thn - 2, thn + 3):
+    status = "kabisat" if (i % 4 == 0 and i % 100 != 0) or (i % 400 == 0) else "bukan kabisat"
+    print(f"Tahun {i} adalah {status}")
+    
+b, t = (bln + 12, thn - 1) if bln < 3 else (bln, thn)
+K, J = t % 100, t // 100
+h = (tgl + (13 * (b + 1)) // 5 + K + K // 4 + J // 4 - 2 * J) % 7
+hari = ["Sabtu", "Minggu", "Senin", "Selasa", "Rabu", "Kamis", "Jumat"]
+
+print(f"\nTanggal {tgl}/{bln}/{thn} adalah hari {hari[h]}!")
+
+
